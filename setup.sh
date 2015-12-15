@@ -14,6 +14,9 @@ fi
 bash /opt/farm/scripts/setup/role.sh samba
 bash /opt/farm/scripts/setup/role.sh sf-php
 
+/etc/init.d/samba stop
+update-rc.d -f samba remove
+
 if [ ! -f /etc/samba/smb.conf.tpl ]; then
 	install_copy $base/smb.conf.tpl /etc/samba/smb.conf.tpl
 fi
