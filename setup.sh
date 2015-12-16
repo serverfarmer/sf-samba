@@ -4,7 +4,7 @@
 
 
 
-base=/opt/sf-samba/templates/$OSVER
+base=/opt/sf-samba-server/templates/$OSVER
 
 if [ ! -f $base/smb.conf.tpl ]; then
 	echo "skipping samba setup, unsupported operating system version"
@@ -25,5 +25,5 @@ if [ ! -f /etc/local/.config/samba.php ]; then
 	install_copy $base/samba.php.tpl /etc/local/.config/samba.php
 fi
 
-ln -sf /opt/sf-samba/add-samba-user.sh /usr/local/bin/add-samba-user
-ln -sf /opt/sf-samba/samba-refresh.php /usr/local/bin/samba-refresh
+ln -sf /opt/sf-samba-server/add-samba-user.sh /usr/local/bin/add-samba-user
+ln -sf /opt/sf-samba-server/samba-refresh.php /usr/local/bin/samba-refresh
