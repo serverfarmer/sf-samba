@@ -1,5 +1,5 @@
-sf-samba extension provides managed Samba solution for small and medium companies.
-It is compatible with the following operating systems:
+sf-samba-server extension provides managed Samba solution for small and medium
+companies. It is compatible with the following operating systems:
 
 - Debian 6.x (Squeeze)
 - Debian 7.x (Wheezy)
