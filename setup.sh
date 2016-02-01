@@ -25,5 +25,4 @@ if [ ! -f /etc/local/.config/samba.php ]; then
 	install_copy $base/samba.php.tpl /etc/local/.config/samba.php
 fi
 
-ln -sf /opt/sf-samba-server/add-samba-user.sh /usr/local/bin/add-samba-user
 ln -sf /opt/sf-samba-server/samba-refresh.php /usr/local/bin/samba-refresh
