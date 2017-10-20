@@ -11,8 +11,8 @@ if [ ! -f $base/smb.conf.tpl ]; then
 	exit 1
 fi
 
-/opt/farm/scripts/setup/role.sh samba
-/opt/farm/scripts/setup/role.sh sf-php
+/opt/farm/ext/repos/install.sh samba
+/opt/farm/scripts/setup/extension.sh sf-php
 
 if [ "`mount |grep ' / ' |grep /dev/mapper`" != "" ]; then
 	echo "configuring samba for full disk encryption server"
