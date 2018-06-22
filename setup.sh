@@ -11,7 +11,7 @@ if [ ! -f $base/smb.conf.tpl ]; then
 	exit 1
 fi
 
-/opt/farm/ext/repos/install.sh samba
+/opt/farm/ext/farm-roles/install.sh samba
 /opt/farm/scripts/setup/extension.sh sf-php
 
 if [ "`mount |grep ' / ' |grep /dev/mapper`" != "" ]; then
