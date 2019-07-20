@@ -14,12 +14,6 @@ fi
 /opt/farm/ext/farm-roles/install.sh samba
 /opt/farm/scripts/setup/extension.sh sf-php
 
-if [ "`mount |grep ' / ' |grep /dev/mapper`" != "" ]; then
-	echo "configuring samba for full disk encryption server"
-	/etc/init.d/samba stop
-	update-rc.d -f samba remove
-fi
-
 if [ ! -f /etc/samba/smb.conf.tpl ]; then
 	install_copy $base/smb.conf.tpl /etc/samba/smb.conf.tpl
 fi
