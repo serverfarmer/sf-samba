@@ -21,5 +21,3 @@ fi
 if [ ! -f /etc/local/.config/samba.php ]; then
 	install_copy $base/samba.php.tpl /etc/local/.config/samba.php
 fi
-
-ln -sf /opt/farm/ext/samba-server/samba-refresh.php /usr/local/bin/samba-refresh
