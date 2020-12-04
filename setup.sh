@@ -13,6 +13,7 @@ fi
 
 /opt/farm/ext/farm-roles/install.sh samba
 /opt/farm/scripts/setup/extension.sh sf-php
+/opt/farm/scripts/setup/extension.sh sf-compat-rclocal
 
 if [ ! -f /etc/samba/smb.conf.tpl ]; then
 	install_copy $base/smb.conf.tpl /etc/samba/smb.conf.tpl
